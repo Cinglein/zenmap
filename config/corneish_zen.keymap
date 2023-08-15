@@ -229,16 +229,16 @@
 		nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// | ATAB |     |     |     |     |     |   |      | UP   |       |     |     | RESET |
+// | ATAB |     |     |     |     |     |   |      | UP   |       |     |     |       |
 // | RTAB |     |     |     |     |     |   | LEFT | DOWN | RIGHT |     |     |       |
 // | LTAB |     |     |     |     |     |   | NTAB | LTAB | RTAB  |     |     |       |
 //                    |     |     |     |   |      |      |       |
                         bindings = <
-   &atab  &trans  &trans  &trans  &trans  &trans      &trans  &trans   &kp UP    &trans     &trans  &bootloader
+   &atab  &trans  &trans  &trans  &trans  &trans      &trans  &trans   &kp UP    &trans     &trans  &trans
    &rtab  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT &kp DOWN  &kp RIGHT  &trans  &trans
    &ltab  &trans  &trans  &trans  &trans  &trans      &trans  &ntab    &ltab     &rtab      &trans  &trans
                      	  &trans  &trans  &trans      &trans  &trans   &trans
                         >;
-                }
+                };
         };
 };
