@@ -190,10 +190,10 @@
 // | NAV |  Z    |  X   |  C   |   V    |  B  |   |  N  |   M    | LT , | GT . |   /   | VIM  |
 //                      | LOW  | SPC    | ESC |   |CAPS | ENT    | RSE  |
                         bindings = <
-   &kp GRAVE &kp Q    &kp W    &kp E   &kp R     &kp T     &kp Y   &kp U    &kp I        &kp O      &kp P       &kp SQT
-   &kp TAB   &hm LC A &hm LG S &hm L D &hm LS F  &kp G     &kp H   &hm RS J &hm RA K     &hm RGUI L &hm RC SEMI &kp BSPC
-   &mo 3     &kp Z    &kp X    &kp C   &kp V     &kp B     &kp N   &kp M    &hm LT COMMA &hm GT DOT &kp FSLH    &vend
-                               &mo 1   &kp SPACE &kp ESC   &caps_word &kp RET  &mo 2
+   &kp GRAVE &kp Q    &kp W    &kp E    &kp R     &kp T     &kp Y   &kp U    &kp I        &kp O      &kp P       &kp SQT
+   &kp TAB   &hm LC A &hm LG S &hm LA D &hm LS F  &kp G     &kp H   &hm RS J &hm RA K     &hm RG L   &hm RC SEMI &kp BSPC
+   &mo 3     &kp Z    &kp X    &kp C    &kp V     &kp B     &kp N   &kp M    &hm LT COMMA &hm GT DOT &kp FSLH    &vend
+                               &mo 1    &kp SPACE &kp ESC   &caps_word &kp RET  &mo 2
                         >;
                 };
                 lower_layer {
