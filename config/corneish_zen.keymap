@@ -206,7 +206,7 @@
                         bindings = <
    &trans  &c1          &c2           &c3          &c4        &c5       &c6      &c7      &c8     &c9     &c0     &bt BT_CLR
    &trans  &kp N1       &kp N2        &kp N3       &kp N4     &kp N5    &kp N6   &kp N7   &kp N8  &kp N9  &kp N0  &trans
-   &trans  &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &BT_SEL 3  &bt_SEL 4 &trans   &trans   &trans  &trans  &trans  &trans
+   &trans  &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &trans   &trans   &trans  &trans  &trans  &trans
                           	      &trans       &trans     &trans    &trans   &trans   &trans
                         >;
                 };
