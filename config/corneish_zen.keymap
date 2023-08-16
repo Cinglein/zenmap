@@ -9,6 +9,10 @@
   };
 };
 
+&mt {
+	tapping-term-ms = <160>;
+};
+
 / {
 	macros {
         	vim_end: vim_end {
@@ -179,9 +183,6 @@
         		bindings = <&kp>, <&kp>;
         	};
     	};
-	&mt {
-		tapping-term-ms = <160>;
-	};
         keymap {
                 compatible = "zmk,keymap";
 
