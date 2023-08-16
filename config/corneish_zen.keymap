@@ -16,7 +16,7 @@
             		compatible = "zmk,behavior-macro";
             		#binding-cells = <0>;
             		bindings
-                		= <&macro_tap &kp ESC &kp DLLR &kp I>
+                		= <&macro_tap &kp ESC &kp DLLR &kp I &kp RIGHT>
                 		;
         	};
         	hyperfish: hyperfish {
@@ -173,7 +173,7 @@
         		compatible = "zmk,behavior-hold-tap";
         		label = "HOMEROW_MODS";
         		#binding-cells = <2>;
-        		tapping-term-ms = <140>;
+        		tapping-term-ms = <150>;
         		quick-tap-ms = <0>;
         		flavor = "tap-preferred";
         		bindings = <&kp>, <&kp>;
@@ -191,7 +191,7 @@
 //                       | LOW  | SPC  | ESC |   |CAPS | ENT  | RSE  |
                         bindings = <
    &kp GRAVE &kp Q       &kp W      &kp E      &kp R       &kp T &kp Y &kp U        &kp I      &kp O      &kp P          &kp SQT
-   &kp TAB   &hm LSHFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G &kp H &hm RGUI J  &hm RALT K &hm RCTRL L &hm RSHFT SEMICOLON &kp BSPC
+   &kp TAB   &hm LSHFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G &kp H &hm RGUI J  &hm RALT K &hm RCTRL L &hm RSHFT SEMI &kp BSPC
    &mo 3     &kp Z       &kp X      &kp C      &kp V       &kp B       &kp N &kp M  &hm LT COMMA &hm GT DOT &kp FSLH     &vim_end
                                &mo 2    &kp SPACE &kp ESC  &caps_word  &kp RET      &mo 1
                         >;
@@ -214,15 +214,15 @@
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |    |  !  |  @  |  {  |  }  |  &  |   | "|" |  ^  |     |     |  \  |    |
-// |    |  #  |  $  |  (  |  )  |  *  |   |  +  |  -  |  =  |     |HFSH |    |
-// |    |  %  |     |  [  |  ]  |     |   |     |  _  |     |     |  \  |    |
+// |    |  !  |  @  |  {  |  }  |  &  |   |     | "|" |     |     |  \  |    |
+// |    |  #  |  $  |  (  |  )  |  *  |   |     |  +  |  -  |  =  |HFSH |    |
+// |    |  %  |     |  [  |  ]  |  ^  |   |     |  _  |     |     |  \  |    |
 //                  |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &kp EXCL  &kp AT   &kp LBRC  &kp RBRC  &kp AMPS    &kp PIPE  &kp CARET  &trans    &trans &kp BSLH   &trans
-   &trans &kp HASH  &kp DLLR &kp LPAR  &kp RPAR  &kp STAR    &kp PLUS  &kp MINUS  &kp EQUAL &trans &hyperfish &trans
-   &trans &kp PRCNT &trans   &kp LBKT  &kp RBKT  &trans      &trans    &kp UNDER  &trans    &trans &kp BSLH   &trans
-                    	     &trans    &trans    &trans      &trans    &trans     &trans
+   &trans &kp EXCL  &kp AT   &kp LBRC  &kp RBRC  &kp AMPS  &trans  &kp PIPE  &trans    &trans &kp BSLH   &trans
+   &trans &kp HASH  &kp DLLR &kp LPAR  &kp RPAR  &kp STAR  &trans  &kp PLUS  &kp MINUS &kp EQUAL &trans &trans
+   &trans &kp PRCNT &trans   &kp LBKT  &kp RBKT  &kp CARET &trans  &kp UNDER &trans    &trans &kp BSLH   &trans
+                    	     &trans    &trans    &trans    &trans  &trans    &trans
                         >;
                 };
 
@@ -230,13 +230,13 @@
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
 // | ATAB |     |     |     |     |     |   |      | UP   |       |     |     |       |
-// | RTAB |     |     |     |     |     |   | LEFT | DOWN | RIGHT |     |     |       |
-// | LTAB |     |     |     |     |     |   | NTAB | LTAB | RTAB  |     |     |       |
+// |      |     |     |     |     |     |   | LEFT | DOWN | RIGHT |     |     |       |
+// |      |     |     |     |     |     |   | NTAB | LTAB | RTAB  |     |     |       |
 //                    |     |     |     |   |      |      |       |
                         bindings = <
-   &atab  &trans  &trans  &trans  &trans  &trans      &trans  &trans   &kp UP    &trans     &trans  &trans
-   &rtab  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT &kp DOWN  &kp RIGHT  &trans  &trans
-   &ltab  &trans  &trans  &trans  &trans  &trans      &trans  &ntab    &ltab     &rtab      &trans  &trans
+   &atab   &trans  &trans  &trans  &trans  &trans      &trans  &trans   &kp UP    &trans     &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT &kp DOWN  &kp RIGHT  &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans      &trans  &ntab    &ltab     &rtab      &trans  &trans
                      	  &trans  &trans  &trans      &trans  &trans   &trans
                         >;
                 };
