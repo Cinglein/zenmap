@@ -31,6 +31,38 @@
                 		= <&macro_tap &kp COLON &kp COLON &kp LT &kp LPAR>
                 		;
         	};
+        	left5: left5 {
+            		label = "left5";
+            		compatible = "zmk,behavior-macro";
+            		#binding-cells = <0>;
+            		bindings
+                		= <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                		;
+        	};
+        	right5: right5 {
+            		label = "right5";
+            		compatible = "zmk,behavior-macro";
+            		#binding-cells = <0>;
+            		bindings
+                		= <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
+                		;
+        	};
+        	up5: up5 {
+            		label = "up5";
+            		compatible = "zmk,behavior-macro";
+            		#binding-cells = <0>;
+            		bindings
+                		= <&macro_tap &kp UP &kp UP &kp UP &kp UP &kp UP>
+                		;
+        	};
+        	down5: down5 {
+            		label = "down5"
+            		compatible = "zmk,behavior-macro";
+            		#binding-cells = <0>;
+            		bindings
+                		= <&macro_tap &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>
+                		;
+        	};
         	atab: atab {
             		label = "alt_tab";
             		compatible = "zmk,behavior-macro";
@@ -233,15 +265,15 @@
 		nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// | ATAB |     |     |     |     |     |   |      | UP   |       |     |     |       |
-// |      |     |     |     |     |     |   | LEFT | DOWN | RIGHT |     |     |       |
-// |      |     |     |     |     |     |   | NTAB | LTAB | RTAB  |     |     |       |
-//                    |     |     |     |   |      |      |       |
+// | ATAB |     |     |     |     |     |   |       | UP5  |  UP  | DOWN5 |        |       |
+// |      |     |     |     |     |     |   | LEFT5 | LEFT | DOWN | RIGHT | RIGHT5 |       |
+// |      |     |     |     |     |     |   | NTAB  | ATAB | LTAB | RTAB  |        |       |
+//                    |     |     |     |   |       |      |       |
                         bindings = <
-   &atab   &trans  &trans  &trans  &trans  &trans      &trans  &trans   &kp UP    &trans     &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT &kp DOWN  &kp RIGHT  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans      &trans  &ntab    &ltab     &rtab      &trans  &trans
-                     	  &trans  &trans  &trans      &trans  &trans   &trans
+   &atab   &trans  &trans  &trans  &trans  &trans      &trans  &up5     &kp UP   &down5     &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans      &left5  &kp LEFT &kp DOWN &kp RIGHT  &right5  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans      &ntab   &atab    &ltab    &rtab      &trans  &trans
+                     	   &trans  &trans  &trans      &trans  &trans   &trans
                         >;
                 };
         };
